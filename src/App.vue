@@ -1,13 +1,7 @@
 <template>
-  <div></div>
+  <v-btn prepend-icon="$vuetify"> Button </v-btn>
 </template>
 
-<script>
-export default {
-  setup() {
-    return {}
-  }
-}
-</script>
+<script setup></script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
