@@ -1,12 +1,10 @@
 import axios from "axios";
+import interceptros from "./interceptros";
 
 const instance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_URL,
-  params: {
-    apiKey: import.meta.env.VITE_APP_API_KEY,
-    plot: "full",
-    i: "tt3896198"
-  }
 })
+
+interceptros(instance)
 
 export default instance
