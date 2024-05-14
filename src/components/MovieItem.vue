@@ -8,7 +8,7 @@
       </div>
       <v-row class="movie-item-controls align-end">
         <v-col>
-          <v-btn variant="outlined" block color="white">Edit</v-btn>
+          <v-btn variant="outlined" block color="white" @click="showInfoModalEvent">Info</v-btn>
         </v-col>
         <v-col>
           <v-btn variant="outlined" block color="white" @click="emitRemoveEvent">Remove</v-btn>
@@ -36,7 +36,11 @@ const emitRemoveEvent = () => {
   emit('removeItem', { id: props.movie.imdbID, title: props.movie.Title })
 }
 
-const emit = defineEmits(['removeItem'])
+const showInfoModalEvent = () => {
+  emit('showModal', props.movie.imdbID)
+}
+
+const emit = defineEmits(['showModal', 'removeItem'])
 </script>
 
 <style scoped>

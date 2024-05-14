@@ -8,6 +8,7 @@
             :movie="movie"
             @mouseover="onMouseOver(movie.Poster)"
             @remove-item="onRemoveItem"
+            @showModel="onShowMovieInfo"
           />
         </v-col>
       </template>
@@ -45,6 +46,10 @@ const onRemoveItem = ({ id, title }) => {
   if (isBoss) {
     moveStore.removeMovie(id)
   }
+}
+
+const onShowMovieInfo = (id) => {
+  console.log(id)
 }
 
 const onMouseOver = (poster) => {
