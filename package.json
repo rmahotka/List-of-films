@@ -11,9 +11,12 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "axios": "^1.6.7",
+    "lodash.debounce": "^4.0.8",
     "pinia": "^2.1.7",
     "vue": "^3.4.19",
+    "vue-router": "^4.3.2",
     "vuetify": "^3.5.5"
   },
   "devDependencies": {
