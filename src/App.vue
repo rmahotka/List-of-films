@@ -31,15 +31,15 @@ const onChangePoster = (poster) => {
   posterData.value = poster
 }
 
-const onPageQueryChange = ({ page = 1 }) => {
-  moveStore.changeCurrentPage(Number(page))
-}
-
 const onPageChanged = (page) => {
   router.push({ path: '/', query: { page } })
 }
 
-watch(() => route.query, onPageQueryChange, { immediate: true, deep: true })
+const onPageQueryChange = ({ page = 1 }) => {
+  moveStore.changeCurrentPage(Number(page))
+}
+
+watch(() => route.query, onPageQueryChange)
 </script>
 
 <style scoped></style>
